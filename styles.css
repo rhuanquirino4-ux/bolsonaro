@@ -1,0 +1,93 @@
+/* Configurações Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Imagem de fundo baseada no seu arquivo */
+    background-image: url('bolsonaro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container da Calculadora */
+.calculator {
+    background-color: rgba(0, 156, 59, 0.9); /* Verde Bandeira com transparência */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    border: 3px solid #FFDF00; /* Borda Amarela */
+    width: 90%;
+    max-width: 350px;
+}
+
+/* Visor */
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Grade de Botões */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Estilo dos Botões */
+button {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #FFDF00; /* Amarelo */
+    color: #003184; /* Azul Bandeira */
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    background-color: #e6c800;
+}
+
+/* Botões Especiais */
+.btn-clear {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-equal {
+    grid-row: span 2;
+    background-color: #003184; /* Azul */
+    color: white;
+}
+
+/* Ajustes para Celulares Pequenos */
+@media (max-width: 400px) {
+    button {
+        padding: 15px;
+        font-size: 18px;
+    }
+    
+    .calculator {
+        padding: 15px;
+    }
+}
